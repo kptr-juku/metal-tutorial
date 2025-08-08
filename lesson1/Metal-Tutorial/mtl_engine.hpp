@@ -30,4 +30,5 @@ private:
     GLFWwindow* glfwWindow;
     NSWindow* metalWindow;
     CAMetalLayer* metalLayer;
+    CA::MetalLayer* metalLayerCpp;
 };

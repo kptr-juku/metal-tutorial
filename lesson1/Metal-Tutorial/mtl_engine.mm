@@ -37,8 +37,15 @@ void MTLEngine::initWindow() {
     
     metalWindow = glfwGetCocoaWindow(glfwWindow);
     metalLayer = [CAMetalLayer layer];
-    metalLayer.device = (__bridge id<MTLDevice>)metalDevice;
-    metalLayer.pixelFormat = MTLPixelFormatBGRA8Unorm;
+    //metalLayer.device = (__bridge id<MTLDevice>)metalDevice;
+    //metalLayer.pixelFormat = MTLPixelFormatBGRA8Unorm;
+    
+    //metalLayerCpp = CA::MetalLayer::layer(); # This could work as well but there is no mechanism to get the native object later.
+    metalLayerCpp = reinterpret_cast<CA::MetalLayer*>((__bridge void*)metalLayer);
+    metalLayerCpp->setDevice(metalDevice);
+    metalLayerCpp->setPixelFormat(MTL::PixelFormat::PixelFormatBGRA8Unorm);
+    
+    
     metalWindow.contentView.layer = metalLayer;
     metalWindow.contentView.wantsLayer = YES;
 }

@@ -145,7 +145,7 @@ void MTLEngine::sendRenderCommand() {
     MTL::RenderPassColorAttachmentDescriptor* cd = renderPassDescriptor->colorAttachments()->object(0);
     cd->setTexture(metalDrawable->texture());
     cd->setLoadAction(MTL::LoadActionClear);
-    cd->setClearColor(MTL::ClearColor(41.0f/255.0f, 42.0f/255.0f, 48.0f/255.0f, 1.0));
+    cd->setClearColor(MTL::ClearColor(41.0f/255.0f, 42.0f/255.0f, 48.0f/255.0f, 1.0)); // Background color
     cd->setStoreAction(MTL::StoreActionStore);
     
     MTL::RenderCommandEncoder* renderCommandEncoder = metalCommandBuffer->renderCommandEncoder(renderPassDescriptor);

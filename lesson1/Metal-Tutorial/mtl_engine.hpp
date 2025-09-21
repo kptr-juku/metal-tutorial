@@ -7,13 +7,9 @@
 
 #define GLFW_INCLUDE_NONE
 #import <GLFW/glfw3.h>
-#define GLFW_EXPOSE_NATIVE_COCOA
-#import <GLFW/glfw3native.h>
 
 #include <Metal/Metal.hpp>
-#include <Metal/Metal.h>
 #include <QuartzCore/CAMetalLayer.hpp>
-#include <QuartzCore/CAMetalLayer.h>
 #include <QuartzCore/QuartzCore.hpp>
 
 #include <simd/simd.h>
@@ -37,11 +33,11 @@ private:
     void sendRenderCommand();
     void draw();
     
+    NS::AutoreleasePool* pPool;
+    
     MTL::Device* metalDevice;
     GLFWwindow* glfwWindow;
-    NSWindow* metalWindow;
-    CAMetalLayer* metalLayer;
-    CA::MetalLayer* metalLayerCpp; // Just for testing/learning purposes. Basically the same one as above.
+    CA::MetalLayer* layer;
     CA::MetalDrawable* metalDrawable;
     
     MTL::Library* metalDefaultLibrary;

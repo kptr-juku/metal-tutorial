@@ -9,6 +9,8 @@
 #include <format>
 #include <iostream>
 
+#include "GLFWBridge.h"
+
 void MTLEngine::init() {
     std::cout << "init()" << std::endl;
     initDevice();
@@ -23,10 +25,10 @@ void MTLEngine::init() {
 void MTLEngine::run() {
     std::cout << "run()" << std::endl;
     while (!glfwWindowShouldClose(glfwWindow)) {
-        @autoreleasepool {
-            metalDrawable = (__bridge CA::MetalDrawable*)[metalLayer nextDrawable];
-            draw();
-        }
+        pPool = NS::AutoreleasePool::alloc()->init();
+        metalDrawable = layer->nextDrawable();
+        draw();
+        pPool->release();
         glfwPollEvents();
     }
 }
@@ -53,23 +55,12 @@ void MTLEngine::initWindow() {
     
     int width, height;
     glfwGetFramebufferSize(glfwWindow, &width, &height);
-    
-    metalWindow = glfwGetCocoaWindow(glfwWindow);
-    metalLayer = [CAMetalLayer layer];
-    
-    // This could work as well but there is no mechanism to get the native object later for contentView.layer
-    //metalLayerCpp = CA::MetalLayer::layer();
-    //metalLayerCpp = reinterpret_cast<CA::MetalLayer*>((__bridge void*)metalLayer);
-    // From the original tutorial acting directly on NS object.
-    metalLayer.device = (__bridge id<MTLDevice>)metalDevice;
-    metalLayer.pixelFormat = MTLPixelFormatBGRA8Unorm;
-    // But there is a CPP bridge and can be used instead:
-    //metalLayerCpp->setDevice(metalDevice);
-    //metalLayerCpp->setPixelFormat(MTL::PixelFormat::PixelFormatBGRA8Unorm);
-    metalLayer.drawableSize = CGSizeMake(width, height);
-    metalWindow.contentView.layer = metalLayer;
-    metalWindow.contentView.wantsLayer = YES;
 
+    layer = CA::MetalLayer::layer();
+    layer->setDevice(metalDevice);
+    layer->setPixelFormat(MTL::PixelFormatBGRA8Unorm);
+    layer->setDrawableSize(CGSizeMake(width, height));
+    GLFWBridge::AddLayerToWindow(glfwWindow, layer);
 }
 
 void MTLEngine::createTriangle() {
@@ -111,7 +102,7 @@ void MTLEngine::createRenderPipeline() {
     renderPipelineDescriptor->setLabel(NS::String::string("Triangle Rendering Pipeline", NS::ASCIIStringEncoding));
     renderPipelineDescriptor->setVertexFunction(vertexShader);
     renderPipelineDescriptor->setFragmentFunction(fragmentShader);
-    MTL::PixelFormat pixelFormat = (MTL::PixelFormat)metalLayer.pixelFormat;
+    MTL::PixelFormat pixelFormat = (MTL::PixelFormat)layer->pixelFormat();
     renderPipelineDescriptor->colorAttachments()->object(0)->setPixelFormat(pixelFormat);
     
     NS::Error* error;

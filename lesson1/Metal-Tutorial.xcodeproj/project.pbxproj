@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		3E3248A929D000FB009CDE34 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3248A829D000FB009CDE34 /* IOKit.framework */; };
 		3E3248AB29D00100009CDE34 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3248AA29D00100009CDE34 /* Cocoa.framework */; };
-		3E56AB67297E0E6E00DB5F4F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E56AB66297E0E6E00DB5F4F /* main.mm */; };
 		3E581F1629871D3000E5CDF6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E581F1529871D3000E5CDF6 /* QuartzCore.framework */; };
 		3E581F1829871D3400E5CDF6 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E581F1729871D3400E5CDF6 /* Metal.framework */; };
 		3E581F1A29871D4300E5CDF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E581F1929871D4300E5CDF6 /* Foundation.framework */; };
-		3E76CD6C298767CD00178E19 /* mtl_engine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E76CD6A298767CD00178E19 /* mtl_engine.mm */; };
 		3E76CD6E2987690700178E19 /* mtl_implementation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E76CD6D2987690700178E19 /* mtl_implementation.cpp */; };
 		5E810F4D2E743A6700161703 /* triangle.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E810F4C2E743A6700161703 /* triangle.metal */; };
+		5EAE203A2E80606A00680106 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE20392E80606A00680106 /* main.cpp */; };
+		5EAE203D2E80614B00680106 /* GLFWBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE203C2E80614B00680106 /* GLFWBridge.mm */; };
+		5EAE203F2E80631800680106 /* mtl_engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE203E2E80631800680106 /* mtl_engine.cpp */; };
 		5ED6206B2E466A4B006EA0FD /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED6206A2E466A4B006EA0FD /* libglfw.3.4.dylib */; };
 /* End PBXBuildFile section */
 
@@ -35,15 +36,17 @@
 		3E3248A829D000FB009CDE34 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		3E3248AA29D00100009CDE34 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3E56AB63297E0E6E00DB5F4F /* Metal-Tutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Metal-Tutorial"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E56AB66297E0E6E00DB5F4F /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		3E581F1529871D3000E5CDF6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3E581F1729871D3400E5CDF6 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		3E581F1929871D4300E5CDF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E76CD692987675300178E19 /* Metal-Tutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Metal-Tutorial.entitlements"; sourceTree = "<group>"; };
-		3E76CD6A298767CD00178E19 /* mtl_engine.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = mtl_engine.mm; sourceTree = "<group>"; };
 		3E76CD6B298767CD00178E19 /* mtl_engine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mtl_engine.hpp; sourceTree = "<group>"; };
 		3E76CD6D2987690700178E19 /* mtl_implementation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mtl_implementation.cpp; sourceTree = "<group>"; };
 		5E810F4C2E743A6700161703 /* triangle.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = triangle.metal; sourceTree = "<group>"; };
+		5EAE20392E80606A00680106 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5EAE203B2E80614B00680106 /* GLFWBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLFWBridge.h; sourceTree = "<group>"; };
+		5EAE203C2E80614B00680106 /* GLFWBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLFWBridge.mm; sourceTree = "<group>"; };
+		5EAE203E2E80631800680106 /* mtl_engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mtl_engine.cpp; sourceTree = "<group>"; };
 		5ED6206A2E466A4B006EA0FD /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,10 +87,12 @@
 		3E56AB65297E0E6E00DB5F4F /* Metal-Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				5EAE203E2E80631800680106 /* mtl_engine.cpp */,
+				5EAE203B2E80614B00680106 /* GLFWBridge.h */,
+				5EAE203C2E80614B00680106 /* GLFWBridge.mm */,
+				5EAE20392E80606A00680106 /* main.cpp */,
 				5E810F4C2E743A6700161703 /* triangle.metal */,
 				3E76CD692987675300178E19 /* Metal-Tutorial.entitlements */,
-				3E56AB66297E0E6E00DB5F4F /* main.mm */,
-				3E76CD6A298767CD00178E19 /* mtl_engine.mm */,
 				3E76CD6B298767CD00178E19 /* mtl_engine.hpp */,
 				3E76CD6D2987690700178E19 /* mtl_implementation.cpp */,
 			);
@@ -165,9 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E76CD6E2987690700178E19 /* mtl_implementation.cpp in Sources */,
+				5EAE203D2E80614B00680106 /* GLFWBridge.mm in Sources */,
 				5E810F4D2E743A6700161703 /* triangle.metal in Sources */,
-				3E56AB67297E0E6E00DB5F4F /* main.mm in Sources */,
-				3E76CD6C298767CD00178E19 /* mtl_engine.mm in Sources */,
+				5EAE203F2E80631800680106 /* mtl_engine.cpp in Sources */,
+				5EAE203A2E80606A00680106 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

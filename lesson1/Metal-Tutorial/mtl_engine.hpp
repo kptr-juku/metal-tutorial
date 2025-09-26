@@ -33,6 +33,9 @@ private:
     void sendRenderCommand();
     void draw();
     
+    static void frameBufferSizeCallback(GLFWwindow *window, int width, int height);
+    void resizeFrameBuffer(int width, int height);
+    
     NS::AutoreleasePool* pPool;
     
     MTL::Device* metalDevice;

@@ -55,6 +55,9 @@ void MTLEngine::initWindow() {
     
     int width, height;
     glfwGetFramebufferSize(glfwWindow, &width, &height);
+    
+    glfwSetWindowUserPointer(glfwWindow, this);
+    glfwSetFramebufferSizeCallback(glfwWindow, frameBufferSizeCallback);
 
     layer = CA::MetalLayer::layer();
     layer->setDevice(metalDevice);
@@ -157,4 +160,14 @@ void MTLEngine::encodeRenderCommand(MTL::RenderCommandEncoder* renderCommandEnco
     NS::UInteger vertexStart = 0;
     NS::UInteger vertexCount = 3;
     renderCommandEncoder->drawPrimitives(typeTriangle, vertexStart, vertexCount);
+}
+
+void MTLEngine::frameBufferSizeCallback(GLFWwindow *window, int width, int height) {
+    MTLEngine* engine = (MTLEngine*)glfwGetWindowUserPointer(window);
+    engine->resizeFrameBuffer(width, height);
+}
+
+void MTLEngine::resizeFrameBuffer(int width, int height) {
+    //std::cout << __FUNCTION__ << " " << width << "x" << height << std::endl;
+    layer->setDrawableSize(CGSizeMake(width, height));
 }

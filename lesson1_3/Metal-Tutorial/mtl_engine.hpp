@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include <filesystem>
+
 #define GLFW_INCLUDE_NONE
 #import <GLFW/glfw3.h>
 
@@ -13,6 +15,11 @@
 #include <QuartzCore/QuartzCore.hpp>
 
 #include <simd/simd.h>
+
+#include "vertex_data.hpp"
+#include "Texture.hpp" 
+#include "stb/stb_image.h"
+
 
 class MTLEngine {
 public:
@@ -24,7 +31,7 @@ private:
     void initDevice();
     void initWindow();
     
-    void createTriangle();
+    void createSquare();
     void createDefaultLibrary();
     void createCommandQueue();
     void createRenderPipeline();
@@ -47,5 +54,7 @@ private:
     MTL::CommandQueue* metalCommandQueue;
     MTL::CommandBuffer* metalCommandBuffer;
     MTL::RenderPipelineState* metalRenderPSO;
-    MTL::Buffer* triangleVertexBuffer;
+    MTL::Buffer* squareVertexBuffer;
+
+    Texture* grassTexture;
 };

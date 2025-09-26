@@ -13,7 +13,9 @@
 		3E581F1829871D3400E5CDF6 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E581F1729871D3400E5CDF6 /* Metal.framework */; };
 		3E581F1A29871D4300E5CDF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E581F1929871D4300E5CDF6 /* Foundation.framework */; };
 		3E76CD6E2987690700178E19 /* mtl_implementation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E76CD6D2987690700178E19 /* mtl_implementation.cpp */; };
-		5E810F4D2E743A6700161703 /* triangle.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E810F4C2E743A6700161703 /* triangle.metal */; };
+		5E5C78AE2E869E4400CF0EB7 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C78AD2E869E4400CF0EB7 /* stb_image.cpp */; };
+		5E5C78B12E869F9D00CF0EB7 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C78B02E869F9D00CF0EB7 /* texture.cpp */; };
+		5E5C78B42E86A46800CF0EB7 /* square.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C78B32E86A46800CF0EB7 /* square.metal */; };
 		5EAE203A2E80606A00680106 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE20392E80606A00680106 /* main.cpp */; };
 		5EAE203D2E80614B00680106 /* GLFWBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE203C2E80614B00680106 /* GLFWBridge.mm */; };
 		5EAE203F2E80631800680106 /* mtl_engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE203E2E80631800680106 /* mtl_engine.cpp */; };
@@ -42,7 +44,13 @@
 		3E76CD692987675300178E19 /* Metal-Tutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Metal-Tutorial.entitlements"; sourceTree = "<group>"; };
 		3E76CD6B298767CD00178E19 /* mtl_engine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mtl_engine.hpp; sourceTree = "<group>"; };
 		3E76CD6D2987690700178E19 /* mtl_implementation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mtl_implementation.cpp; sourceTree = "<group>"; };
-		5E810F4C2E743A6700161703 /* triangle.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = triangle.metal; sourceTree = "<group>"; };
+		5E5C78A82E869AC400CF0EB7 /* mc_grass.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mc_grass.jpeg; sourceTree = "<group>"; };
+		5E5C78AC2E869DF000CF0EB7 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		5E5C78AD2E869E4400CF0EB7 /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
+		5E5C78AF2E869F9D00CF0EB7 /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
+		5E5C78B02E869F9D00CF0EB7 /* texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		5E5C78B22E86A2E000CF0EB7 /* vertex_data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertex_data.hpp; sourceTree = "<group>"; };
+		5E5C78B32E86A46800CF0EB7 /* square.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = square.metal; sourceTree = "<group>"; };
 		5EAE20392E80606A00680106 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5EAE203B2E80614B00680106 /* GLFWBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLFWBridge.h; sourceTree = "<group>"; };
 		5EAE203C2E80614B00680106 /* GLFWBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLFWBridge.mm; sourceTree = "<group>"; };
@@ -70,6 +78,8 @@
 		3E56AB5A297E0E6E00DB5F4F = {
 			isa = PBXGroup;
 			children = (
+				5E5C78AA2E869D9000CF0EB7 /* external */,
+				5E5C78A72E869A8900CF0EB7 /* assets */,
 				3E56AB65297E0E6E00DB5F4F /* Metal-Tutorial */,
 				3E56AB64297E0E6E00DB5F4F /* Products */,
 				3E581F1429871D3000E5CDF6 /* Frameworks */,
@@ -87,11 +97,14 @@
 		3E56AB65297E0E6E00DB5F4F /* Metal-Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				5E5C78B32E86A46800CF0EB7 /* square.metal */,
+				5E5C78B22E86A2E000CF0EB7 /* vertex_data.hpp */,
+				5E5C78AF2E869F9D00CF0EB7 /* texture.hpp */,
+				5E5C78B02E869F9D00CF0EB7 /* texture.cpp */,
 				5EAE203E2E80631800680106 /* mtl_engine.cpp */,
 				5EAE203B2E80614B00680106 /* GLFWBridge.h */,
 				5EAE203C2E80614B00680106 /* GLFWBridge.mm */,
 				5EAE20392E80606A00680106 /* main.cpp */,
-				5E810F4C2E743A6700161703 /* triangle.metal */,
 				3E76CD692987675300178E19 /* Metal-Tutorial.entitlements */,
 				3E76CD6B298767CD00178E19 /* mtl_engine.hpp */,
 				3E76CD6D2987690700178E19 /* mtl_implementation.cpp */,
@@ -110,6 +123,31 @@
 				3E581F1529871D3000E5CDF6 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E5C78A72E869A8900CF0EB7 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C78A82E869AC400CF0EB7 /* mc_grass.jpeg */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		5E5C78AA2E869D9000CF0EB7 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C78AB2E869DD900CF0EB7 /* stb */,
+			);
+			path = external;
+			sourceTree = "<group>";
+		};
+		5E5C78AB2E869DD900CF0EB7 /* stb */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C78AD2E869E4400CF0EB7 /* stb_image.cpp */,
+				5E5C78AC2E869DF000CF0EB7 /* stb_image.h */,
+			);
+			path = stb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +207,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5C78B42E86A46800CF0EB7 /* square.metal in Sources */,
 				3E76CD6E2987690700178E19 /* mtl_implementation.cpp in Sources */,
 				5EAE203D2E80614B00680106 /* GLFWBridge.mm in Sources */,
-				5E810F4D2E743A6700161703 /* triangle.metal in Sources */,
+				5E5C78AE2E869E4400CF0EB7 /* stb_image.cpp in Sources */,
+				5E5C78B12E869F9D00CF0EB7 /* texture.cpp in Sources */,
 				5EAE203F2E80631800680106 /* mtl_engine.cpp in Sources */,
 				5EAE203A2E80606A00680106 /* main.cpp in Sources */,
 			);
@@ -299,6 +339,7 @@
 				HEADER_SEARCH_PATHS = (
 					/opt/homebrew/Cellar/glfw/3.4/include,
 					"$(PROJECT_DIR)/../../metal-cpp-metal-cpp_macOS15.2_iOS18.2",
+					"$(PROJECT_DIR)/external",
 				);
 				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.4/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,6 +356,7 @@
 				HEADER_SEARCH_PATHS = (
 					/opt/homebrew/Cellar/glfw/3.4/include,
 					"$(PROJECT_DIR)/../../metal-cpp-metal-cpp_macOS15.2_iOS18.2",
+					"$(PROJECT_DIR)/external",
 				);
 				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.4/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";

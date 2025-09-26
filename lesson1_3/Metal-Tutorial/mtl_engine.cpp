@@ -16,7 +16,7 @@ void MTLEngine::init() {
     initDevice();
     initWindow();
     
-    createTriangle();
+    createSquare();
     createDefaultLibrary();
     createCommandQueue();
     createRenderPipeline();
@@ -66,20 +66,19 @@ void MTLEngine::initWindow() {
     GLFWBridge::AddLayerToWindow(glfwWindow, layer);
 }
 
-void MTLEngine::createTriangle() {
-    simd::float3 triangleVertices[] = {
-        {-0.5f, -0.5f, 0.0f},
-        { 0.5f, -0.5f, 0.0f},
-        { 0.0f,  0.5f, 0.0f}
+void MTLEngine::createSquare() {
+    VertexData squareVertices[] {
+        {{-0.5, -0.5,  0.5, 1.0f}, {0.0f, 0.0f}},
+        {{-0.5,  0.5,  0.5, 1.0f}, {0.0f, 1.0f}},
+        {{ 0.5,  0.5,  0.5, 1.0f}, {1.0f, 1.0f}},
+        {{-0.5, -0.5,  0.5, 1.0f}, {0.0f, 0.0f}},
+        {{ 0.5,  0.5,  0.5, 1.0f}, {1.0f, 1.0f}},
+        {{ 0.5, -0.5,  0.5, 1.0f}, {1.0f, 0.0f}}
     };
-    
-    std::cout << "Sizeof simd::float3 " << sizeof(simd::float3) << std::endl;
-    std::cout << "I think triangleVertices size is " << 3 * (4 * 4) << " bytes" << std::endl;
-    std::cout << "Actual " << sizeof(triangleVertices) << std::endl;
 
-    triangleVertexBuffer = metalDevice->newBuffer(&triangleVertices,
-                                                  sizeof(triangleVertices),
-                                                  MTL::ResourceStorageModeShared);
+    squareVertexBuffer = metalDevice->newBuffer(&squareVertices, sizeof(squareVertices), MTL::ResourceStorageModeShared);
+
+    grassTexture = new Texture("assets/mc_grass.jpeg", metalDevice);
 }
 
 void MTLEngine::createDefaultLibrary() {
@@ -155,10 +154,11 @@ void MTLEngine::sendRenderCommand() {
 
 void MTLEngine::encodeRenderCommand(MTL::RenderCommandEncoder* renderCommandEncoder) {
     renderCommandEncoder->setRenderPipelineState(metalRenderPSO);
-    renderCommandEncoder->setVertexBuffer(triangleVertexBuffer, 0, 0);
+    renderCommandEncoder->setVertexBuffer(squareVertexBuffer, 0, 0);
     MTL::PrimitiveType typeTriangle = MTL::PrimitiveTypeTriangle;
     NS::UInteger vertexStart = 0;
-    NS::UInteger vertexCount = 3;
+    NS::UInteger vertexCount = 6;
+    renderCommandEncoder->setFragmentTexture(grassTexture->texture, 0);
     renderCommandEncoder->drawPrimitives(typeTriangle, vertexStart, vertexCount);
 }
 

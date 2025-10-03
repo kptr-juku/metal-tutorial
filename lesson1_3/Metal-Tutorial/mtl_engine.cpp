@@ -11,12 +11,12 @@
 
 #include "GLFWBridge.h"
 
-void MTLEngine::init() {
+void MTLEngine::init(std::string_view pic) {
     std::cout << "init()" << std::endl;
     initDevice();
     initWindow();
     
-    createSquare();
+    createSquare(pic);
     createDefaultLibrary();
     createCommandQueue();
     createRenderPipeline();
@@ -66,7 +66,7 @@ void MTLEngine::initWindow() {
     GLFWBridge::AddLayerToWindow(glfwWindow, layer);
 }
 
-void MTLEngine::createSquare() {
+void MTLEngine::createSquare(std::string_view pic) {
     VertexData squareVertices[] {
         {{-0.5, -0.5,  0.5, 1.0f}, {0.0f, 0.0f}},
         {{-0.5,  0.5,  0.5, 1.0f}, {0.0f, 1.0f}},
@@ -78,7 +78,7 @@ void MTLEngine::createSquare() {
 
     squareVertexBuffer = metalDevice->newBuffer(&squareVertices, sizeof(squareVertices), MTL::ResourceStorageModeShared);
 
-    grassTexture = new Texture("assets/mc_grass.jpeg", metalDevice);
+    grassTexture = new Texture(pic.data(), metalDevice);
 }
 
 void MTLEngine::createDefaultLibrary() {

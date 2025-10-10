@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E3248A929D000FB009CDE34 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3248A829D000FB009CDE34 /* IOKit.framework */; };
+		3E3248AB29D00100009CDE34 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3248AA29D00100009CDE34 /* Cocoa.framework */; };
+		3E581F1629871D3000E5CDF6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E581F1529871D3000E5CDF6 /* QuartzCore.framework */; };
+		3E581F1829871D3400E5CDF6 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E581F1729871D3400E5CDF6 /* Metal.framework */; };
+		3E581F1A29871D4300E5CDF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E581F1929871D4300E5CDF6 /* Foundation.framework */; };
+		3E76CD6E2987690700178E19 /* mtl_implementation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E76CD6D2987690700178E19 /* mtl_implementation.cpp */; };
+		5E5591042E9910BD0018511C /* AAPLMathUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E5591032E9910BD0018511C /* AAPLMathUtilities.cpp */; };
+		5E5591062E9911F80018511C /* cube.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5E5591052E9911F80018511C /* cube.metal */; };
+		5E5C78AE2E869E4400CF0EB7 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C78AD2E869E4400CF0EB7 /* stb_image.cpp */; };
+		5E5C78B12E869F9D00CF0EB7 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C78B02E869F9D00CF0EB7 /* texture.cpp */; };
+		5EAE203A2E80606A00680106 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE20392E80606A00680106 /* main.cpp */; };
+		5EAE203D2E80614B00680106 /* GLFWBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE203C2E80614B00680106 /* GLFWBridge.mm */; };
+		5EAE203F2E80631800680106 /* mtl_engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE203E2E80631800680106 /* mtl_engine.cpp */; };
+		5ED6206B2E466A4B006EA0FD /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED6206A2E466A4B006EA0FD /* libglfw.3.4.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E56AB61297E0E6E00DB5F4F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3E3248A829D000FB009CDE34 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		3E3248AA29D00100009CDE34 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3E56AB63297E0E6E00DB5F4F /* Metal-Tutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Metal-Tutorial"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E581F1529871D3000E5CDF6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E581F1729871D3400E5CDF6 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3E581F1929871D4300E5CDF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E76CD692987675300178E19 /* Metal-Tutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Metal-Tutorial.entitlements"; sourceTree = "<group>"; };
+		3E76CD6B298767CD00178E19 /* mtl_engine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mtl_engine.hpp; sourceTree = "<group>"; };
+		3E76CD6D2987690700178E19 /* mtl_implementation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mtl_implementation.cpp; sourceTree = "<group>"; };
+		5E5591022E9910BD0018511C /* AAPLMathUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLMathUtilities.h; sourceTree = "<group>"; };
+		5E5591032E9910BD0018511C /* AAPLMathUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AAPLMathUtilities.cpp; sourceTree = "<group>"; };
+		5E5591052E9911F80018511C /* cube.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = cube.metal; sourceTree = "<group>"; };
+		5E5C78A82E869AC400CF0EB7 /* mc_grass.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mc_grass.jpeg; sourceTree = "<group>"; };
+		5E5C78AC2E869DF000CF0EB7 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		5E5C78AD2E869E4400CF0EB7 /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
+		5E5C78AF2E869F9D00CF0EB7 /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
+		5E5C78B02E869F9D00CF0EB7 /* texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		5E5C78B22E86A2E000CF0EB7 /* vertex_data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertex_data.hpp; sourceTree = "<group>"; };
+		5EAE20392E80606A00680106 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5EAE203B2E80614B00680106 /* GLFWBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLFWBridge.h; sourceTree = "<group>"; };
+		5EAE203C2E80614B00680106 /* GLFWBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLFWBridge.mm; sourceTree = "<group>"; };
+		5EAE203E2E80631800680106 /* mtl_engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mtl_engine.cpp; sourceTree = "<group>"; };
+		5ED6206A2E466A4B006EA0FD /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E56AB60297E0E6E00DB5F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED6206B2E466A4B006EA0FD /* libglfw.3.4.dylib in Frameworks */,
+				3E3248AB29D00100009CDE34 /* Cocoa.framework in Frameworks */,
+				3E3248A929D000FB009CDE34 /* IOKit.framework in Frameworks */,
+				3E581F1A29871D4300E5CDF6 /* Foundation.framework in Frameworks */,
+				3E581F1829871D3400E5CDF6 /* Metal.framework in Frameworks */,
+				3E581F1629871D3000E5CDF6 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E56AB5A297E0E6E00DB5F4F = {
+			isa = PBXGroup;
+			children = (
+				5E5C78AA2E869D9000CF0EB7 /* external */,
+				5E5C78A72E869A8900CF0EB7 /* assets */,
+				3E56AB65297E0E6E00DB5F4F /* Metal-Tutorial */,
+				3E56AB64297E0E6E00DB5F4F /* Products */,
+				3E581F1429871D3000E5CDF6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3E56AB64297E0E6E00DB5F4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E56AB63297E0E6E00DB5F4F /* Metal-Tutorial */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E56AB65297E0E6E00DB5F4F /* Metal-Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				5E5591052E9911F80018511C /* cube.metal */,
+				5E5591022E9910BD0018511C /* AAPLMathUtilities.h */,
+				5E5591032E9910BD0018511C /* AAPLMathUtilities.cpp */,
+				5E5C78B22E86A2E000CF0EB7 /* vertex_data.hpp */,
+				5E5C78AF2E869F9D00CF0EB7 /* texture.hpp */,
+				5E5C78B02E869F9D00CF0EB7 /* texture.cpp */,
+				5EAE203E2E80631800680106 /* mtl_engine.cpp */,
+				5EAE203B2E80614B00680106 /* GLFWBridge.h */,
+				5EAE203C2E80614B00680106 /* GLFWBridge.mm */,
+				5EAE20392E80606A00680106 /* main.cpp */,
+				3E76CD692987675300178E19 /* Metal-Tutorial.entitlements */,
+				3E76CD6B298767CD00178E19 /* mtl_engine.hpp */,
+				3E76CD6D2987690700178E19 /* mtl_implementation.cpp */,
+			);
+			path = "Metal-Tutorial";
+			sourceTree = "<group>";
+		};
+		3E581F1429871D3000E5CDF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ED6206A2E466A4B006EA0FD /* libglfw.3.4.dylib */,
+				3E3248AA29D00100009CDE34 /* Cocoa.framework */,
+				3E3248A829D000FB009CDE34 /* IOKit.framework */,
+				3E581F1929871D4300E5CDF6 /* Foundation.framework */,
+				3E581F1729871D3400E5CDF6 /* Metal.framework */,
+				3E581F1529871D3000E5CDF6 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E5C78A72E869A8900CF0EB7 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C78A82E869AC400CF0EB7 /* mc_grass.jpeg */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		5E5C78AA2E869D9000CF0EB7 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C78AB2E869DD900CF0EB7 /* stb */,
+			);
+			path = external;
+			sourceTree = "<group>";
+		};
+		5E5C78AB2E869DD900CF0EB7 /* stb */ = {
+			isa = PBXGroup;
+			children = (
+				5E5C78AD2E869E4400CF0EB7 /* stb_image.cpp */,
+				5E5C78AC2E869DF000CF0EB7 /* stb_image.h */,
+			);
+			path = stb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E56AB62297E0E6E00DB5F4F /* Metal-Tutorial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E56AB6A297E0E6E00DB5F4F /* Build configuration list for PBXNativeTarget "Metal-Tutorial" */;
+			buildPhases = (
+				3E56AB5F297E0E6E00DB5F4F /* Sources */,
+				3E56AB60297E0E6E00DB5F4F /* Frameworks */,
+				3E56AB61297E0E6E00DB5F4F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Metal-Tutorial";
+			productName = "Metal-Guide";
+			productReference = 3E56AB63297E0E6E00DB5F4F /* Metal-Tutorial */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E56AB5B297E0E6E00DB5F4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3E56AB62297E0E6E00DB5F4F = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 3E56AB5E297E0E6E00DB5F4F /* Build configuration list for PBXProject "Metal-Tutorial" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E56AB5A297E0E6E00DB5F4F;
+			productRefGroup = 3E56AB64297E0E6E00DB5F4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E56AB62297E0E6E00DB5F4F /* Metal-Tutorial */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E56AB5F297E0E6E00DB5F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E76CD6E2987690700178E19 /* mtl_implementation.cpp in Sources */,
+				5E5591042E9910BD0018511C /* AAPLMathUtilities.cpp in Sources */,
+				5EAE203D2E80614B00680106 /* GLFWBridge.mm in Sources */,
+				5E5C78AE2E869E4400CF0EB7 /* stb_image.cpp in Sources */,
+				5E5591062E9911F80018511C /* cube.metal in Sources */,
+				5E5C78B12E869F9D00CF0EB7 /* texture.cpp in Sources */,
+				5EAE203F2E80631800680106 /* mtl_engine.cpp in Sources */,
+				5EAE203A2E80606A00680106 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3E56AB68297E0E6E00DB5F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3E56AB69297E0E6E00DB5F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3E56AB6B297E0E6E00DB5F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Metal-Tutorial/Metal-Tutorial.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/glfw/3.4/include,
+					"$(PROJECT_DIR)/../../metal-cpp-metal-cpp_macOS15.2_iOS18.2",
+					"$(PROJECT_DIR)/external",
+				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.4/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E56AB6C297E0E6E00DB5F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Metal-Tutorial/Metal-Tutorial.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/glfw/3.4/include,
+					"$(PROJECT_DIR)/../../metal-cpp-metal-cpp_macOS15.2_iOS18.2",
+					"$(PROJECT_DIR)/external",
+				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.4/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E56AB5E297E0E6E00DB5F4F /* Build configuration list for PBXProject "Metal-Tutorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E56AB68297E0E6E00DB5F4F /* Debug */,
+				3E56AB69297E0E6E00DB5F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E56AB6A297E0E6E00DB5F4F /* Build configuration list for PBXNativeTarget "Metal-Tutorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E56AB6B297E0E6E00DB5F4F /* Debug */,
+				3E56AB6C297E0E6E00DB5F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E56AB5B297E0E6E00DB5F4F /* Project object */;
+}

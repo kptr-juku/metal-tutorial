@@ -27,15 +27,21 @@ public:
     void init(std::string_view pic);
     void run();
     void cleanup();
-
+    
 private:
     void initDevice();
     void initWindow();
     
     void createCube(std::string_view pic);
+    void createBuffers();
     void createDefaultLibrary();
     void createCommandQueue();
     void createRenderPipeline();
+    void createDepthAndMSAATextures();
+    void createRenderPassDescriptor();
+
+    // Upon resizing, update Depth and MSAA Textures.
+    void updateRenderPassDescriptor();
     
     void encodeRenderCommand(MTL::RenderCommandEncoder* renderEncoder);
     void sendRenderCommand();
@@ -55,9 +61,14 @@ private:
     MTL::CommandQueue* metalCommandQueue;
     MTL::CommandBuffer* metalCommandBuffer;
     MTL::RenderPipelineState* metalRenderPSO;
-    MTL::Buffer* squareVertexBuffer;
     MTL::Buffer* cubeVertexBuffer;
     MTL::Buffer* transformationBuffer;
+    
+    MTL::DepthStencilState* depthStencilState;
+    MTL::RenderPassDescriptor* renderPassDescriptor;
+    MTL::Texture* msaaRenderTargetTexture{nullptr};
+    MTL::Texture* depthTexture;
+    int sampleCount{4};
 
     Texture* grassTexture;
 };

@@ -67,25 +67,10 @@ void MTLEngine::initWindow() {
     GLFWBridge::AddLayerToWindow(glfwWindow, metalLayer);
 }
 
-void MTLEngine::createSquare(std::string_view pic) {
-    VertexData squareVertices[] {
-        {{-0.5, -0.5,  0.5, 1.0f}, {0.0f, 0.0f}},
-        {{-0.5,  0.5,  0.5, 1.0f}, {0.0f, 1.0f}},
-        {{ 0.5,  0.5,  0.5, 1.0f}, {1.0f, 1.0f}},
-        {{-0.5, -0.5,  0.5, 1.0f}, {0.0f, 0.0f}},
-        {{ 0.5,  0.5,  0.5, 1.0f}, {1.0f, 1.0f}},
-        {{ 0.5, -0.5,  0.5, 1.0f}, {1.0f, 0.0f}}
-    };
-
-    squareVertexBuffer = metalDevice->newBuffer(&squareVertices, sizeof(squareVertices), MTL::ResourceStorageModeShared);
-
-    grassTexture = new Texture(pic.data(), metalDevice);
-}
-
 void MTLEngine::createCube(std::string_view pic) {
     // Cube for use in a right-handed coordinate system with triangle faces
     // specified with a Counter-Clockwise winding order.
-VertexData cubeVertices[] = {
+    VertexData cubeVertices[] = {
         // Front face
         {{-0.5, -0.5, 0.5, 1.0}, {0.0, 0.0}},
         {{0.5, -0.5, 0.5, 1.0}, {1.0, 0.0}},
@@ -234,7 +219,7 @@ void MTLEngine::encodeRenderCommand(MTL::RenderCommandEncoder* renderCommandEnco
                                                  -F.x,-F.y,-F.z, dot( F, P),
                                                   0, 0, 0, 1);
 
-    const auto layerSize = GLFWBridge::GetLayerDimensions(metalLayer);
+    const auto layerSize = metalLayer->drawableSize();
     float aspectRatio = (layerSize.width / layerSize.height);
     float fov = 90 * (M_PI / 180.0f);
     float nearZ = 0.1f;

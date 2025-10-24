@@ -32,7 +32,6 @@ private:
     void initDevice();
     void initWindow();
     
-    void createSquare(std::string_view pic);
     void createCube(std::string_view pic);
     void createDefaultLibrary();
     void createCommandQueue();

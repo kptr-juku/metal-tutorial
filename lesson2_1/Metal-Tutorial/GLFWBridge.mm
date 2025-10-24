@@ -18,10 +18,4 @@ void AddLayerToWindow(GLFWwindow* window, CA::MetalLayer* layer)
     [[cocoa_window contentView] setNeedsLayout:YES];
 }
 
-CGSize GetLayerDimensions(CA::MetalLayer *layer)
-{
-    CAMetalLayer* native_layer = (__bridge CAMetalLayer*)layer;
-    return {native_layer.frame.size.width, native_layer.frame.size.height};
-}
-
 }

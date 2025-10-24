@@ -9,6 +9,5 @@ namespace CA {
 }
 namespace GLFWBridge {
     void AddLayerToWindow(GLFWwindow *window, CA::MetalLayer *layer);
-    CGSize GetLayerDimensions(CA::MetalLayer *layer);
 }
 #endif /* GLFWBridge_h */
